@@ -39,7 +39,7 @@ function checkCookie() {
   var user=getCookie("username");
   console.log(user);
   if (user != "" ) {
-    alert("今日は" + user);
+    prompt("今日は" + user);
   } else {
      user = prompt("名前を教えてください:","");
      if (user != "" && user != null) {
@@ -48,20 +48,12 @@ function checkCookie() {
   }
 }
 
-
-function delCookie()
-{
-  document.cookie = "username=; max-age=0; path=/";
-}
-  
-
 </script>
 </head>
   <h1> Cookie の例 </h1>
 <body>
 <div style="background-color : #CCC;">
    <input type="button" value="クッキー判定" onclick="checkCookie()">
-  <input type="button" value="クッキー削除" onclick="delCookie()">
 </div>
   
  <div id="map_canvas"></div>
